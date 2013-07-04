@@ -4,7 +4,7 @@ module.exports = {
       version : JSON.parse(fs.readFileSync('./package.json')).version,
       root: require('path').normalize(__dirname + '/..'),
       app: {
-        name: 'Mega Structures Dev'
+        name: 'Web App Dev'
       },
       db: 'mongodb://localhost/tallest_tower_dev',
       facebook: {
@@ -18,7 +18,7 @@ module.exports = {
       version : JSON.parse(fs.readFileSync('./package.json')).version,
       root: require('path').normalize(__dirname + '/..'),
       app: {
-        name: 'Mega Structures'
+        name: 'Web App Satge'
       },
       db: process.env.MONGOLAB_URI,
       facebook: {

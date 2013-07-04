@@ -4,29 +4,29 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
   , http = require('http')
   , path = require('path');
 
+// Load configurations
+var env = process.env.NODE_ENV || 'development'
+  , config = require('./config/config')[env]
+  , mongoose = require('mongoose');
+
+
 var app = express();
+console.log("SHOW ME THAT ENVIRONMENT ", process.env);
 
-app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/public');
-  app.engine('html', require('ejs').renderFile);
-  app.use(express.favicon());
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
-});
+// Bootstrap db connection
+mongoose.connect(config.db)
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
-  app.use(express.logger('dev'));
-});
+// Congiure Express
+require('./config/express')(app, config);
 
-app.get('/', routes.index);
+// Bootstrap routes
+require('./config/routes')(app, config);
+
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
