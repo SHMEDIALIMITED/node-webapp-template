@@ -14,7 +14,6 @@ var env = process.env.NODE_ENV || 'development'
 
 
 var app = express();
-console.log("SHOW ME THAT ENVIRONMENT ", process.env);
 
 // Bootstrap db connection
 mongoose.connect(config.db)
