@@ -28,7 +28,6 @@
     "backbone",
     "require",
     "optimised"
-    "strider"
   ],
   "engines": {
     "node": "0.8.14",
