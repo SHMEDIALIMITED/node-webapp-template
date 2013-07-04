@@ -18,7 +18,7 @@ module.exports = {
       version : JSON.parse(fs.readFileSync('./package.json')).version,
       root: require('path').normalize(__dirname + '/..'),
       app: {
-        name: 'Web App Stage'
+        name: 'Web App'
       },
       db: process.env.MONGOLAB_URI,
       facebook: {

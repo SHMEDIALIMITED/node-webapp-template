@@ -1,6 +1,6 @@
 
 /**
- * Author Patrick Wolleb. SH MEDIA LIMITED all Rights reserved.
+ * Author Patrick Wolleb, SH MEDIA Limited.
  */
 
 var express = require('express')
@@ -23,8 +23,6 @@ require('./config/express')(app, config);
 
 // Bootstrap routes
 require('./config/routes')(app, config);
-
-
 
 
 http.createServer(app).listen(app.get('port'), function(){

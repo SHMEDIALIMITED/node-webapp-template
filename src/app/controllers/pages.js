@@ -1,11 +1,4 @@
 
-
-var fs=  require('fs');
-fs.readFile('./package.json', 'utf8', function(err,data) {
-	var json = 	data;
-	console.log(json)
-});
-	
 module.exports = function(config) {
 	var api = {};
 
