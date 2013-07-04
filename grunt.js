@@ -7,14 +7,14 @@ module.exports = function(grunt) {
         exec: {
           build: {
             command: 'node r.js -o r.config.js',
-            stdout: true, 
-            stderr: true
+            stdout: false, 
+            stderr: false
           },
           deploy : {
-            command : 'git add package.json && git add src/package.json && git commit -m "Build:' + grunt.file.readJSON('package.json').version + '" && git push origin master --force',
+            command : 'git add package.json && git add src/package.json && git commit -m "Build:' + grunt.file.readJSON('package.json').version + '" && git push --force origin master',
             stdout: true, 
             stderr: true 
-          }
+          },
         },
 
         cssmin: {
@@ -123,7 +123,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default',  'clean:init copy:init clean:css imageEmbed cssmin clean:js copy:js exec:build clean:post');
-    grunt.registerTask('deploy', 'bump exec:deploy');
     grunt.registerTask('midi', 'concat');
 
 
