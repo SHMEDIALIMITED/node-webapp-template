@@ -4,6 +4,27 @@
   "author": "Patrick Wolleb <patrick.wolleb@shmedia.co.uk",
   "description": "Web app template for Node.js with Backbone/Require frontend for deployment on Heroku",
 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SHMEDIALIMITED/web-app-basic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SHMEDIALIMITED/web-app-basic/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/SHMEDIALIMITED/web-app-basic/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "webapp",
+    "template",
+    "heroku",
+    "backbone",
+    "require",
+    "optimised"
+  ],
   "engines": {
     "node": "0.8.14",
     "npm": "1.1.65"
