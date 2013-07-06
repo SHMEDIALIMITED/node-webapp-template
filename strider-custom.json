@@ -1,5 +1,5 @@
 {
-  "prepare": "echo prepare",
+  "prepare": "grunt",
   "test" : "echo tetst",
   "deploy": "git subtree push --force --prefix bin heroku master"
 }
