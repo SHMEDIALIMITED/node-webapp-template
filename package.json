@@ -3,11 +3,7 @@
   "version": "0.0.2",
   "author": "Patrick Wolleb <patrick.wolleb@shmedia.co.uk",
   "description": "Web app template for Node.js with Backbone/Require frontend for deployment on Heroku",
-  "scripts": {
-    "start": "node bin/server",
-    "test": "jasmine-node src/test/spec",
-    "predeploy": "grunt"
-  },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/SHMEDIALIMITED/web-app-basic.git"
