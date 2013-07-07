@@ -1,5 +1,0 @@
-{
-  "prepare": "grunt",
-  "test" : "echo tetst",
-  "deploy": "echo deploy"
-}
