@@ -1,4 +1,4 @@
-#SH MEDIA LIMITED
+#SH MEDIA Limited
 
 ##Basic Web App
 
