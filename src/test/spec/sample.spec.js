@@ -1,3 +1,5 @@
+var mongoose = require('mongoose'):
+
 describe('sample spec node', function(){
 
   it('should pass', function(){
