@@ -122,7 +122,7 @@ module.exports = function(grunt) {
       return parts.join('.');
     });
 
-    grunt.registerTask('default',  'clean:init copy:init clean:css imageEmbed cssmin clean:js copy:js exec:build clean:post');
+    grunt.registerTask('default',  'clean:init copy:init clean:css imageEmbed cssmin clean:js copy:js exec:build');
     grunt.registerTask('midi', 'concat');
 
 
