@@ -1,4 +1,0 @@
-{
-	"prepare" : "grunt && cd bin/ && npm install",
-	"test" : "cd bin/ && jasmine-node test/spec/ && grunt clean:post"
-}

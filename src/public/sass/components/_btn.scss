@@ -1,0 +1,29 @@
+.btn {
+    background-color: $red-primary;
+    border: 1px solid $red-secondary;
+    border-radius: 2px;
+    padding: 0.6em;
+    display: inline-block;
+    width: auto;
+    font-family: 'mylius_modernbold';
+    font-size: 1.8em;
+    color: $white-primary;
+    cursor: pointer;
+    @include transition(background-color 0.5s);
+}
+
+.btn:hover {
+    background-color: $red-secondary;
+    border: 1px solid $red-primary;
+}
+
+.btn-sec {
+    @extend .btn;
+    background-color: $blue-primary;
+    border: 1px solid $blue-secondary;
+}
+
+.btn-sec:hover {
+    background-color: $blue-secondary;
+    border: 1px solid $blue-primary;
+}

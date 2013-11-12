@@ -1,0 +1,349 @@
+/* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'mylius_modernbold';
+  src: url("fonts/myliusmodern-bold-webfont.eot");
+  src: url("fonts/myliusmodern-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/myliusmodern-bold-webfont.woff") format("woff"), url("fonts/myliusmodern-bold-webfont.ttf") format("truetype"), url("fonts/myliusmodern-bold-webfont.svg#mylius_modernbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mylius_modernregular';
+  src: url("fonts/myliusmodern-regular-webfont.eot");
+  src: url("fonts/myliusmodern-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/myliusmodern-regular-webfont.woff") format("woff"), url("fonts/myliusmodern-regular-webfont.ttf") format("truetype"), url("fonts/myliusmodern-regular-webfont.svg#mylius_modernregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 48, ../sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 52, ../sass/screen.scss */
+body {
+  font-family: 'mylius_modernregular';
+  font-size: 62.5%;
+  color: #005daa;
+}
+
+/* line 58, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'mylius_modernbold';
+  padding: 0.8em 0px;
+  margin-bottom: 1.2em;
+  margin-top: 1.2em;
+  border-bottom: dashed 1px #777;
+}
+
+/* line 66, ../sass/screen.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 67, ../sass/screen.scss */
+h2 {
+  font-size: 2.6em;
+}
+
+/* line 68, ../sass/screen.scss */
+h3 {
+  font-size: 2.2em;
+}
+
+/* line 69, ../sass/screen.scss */
+h4 {
+  font-size: 1.8em;
+}
+
+/* line 70, ../sass/screen.scss */
+h5 {
+  font-size: 1.6em;
+}
+
+/* line 71, ../sass/screen.scss */
+h6 {
+  font-size: 1.4em;
+}
+
+/* line 75, ../sass/screen.scss */
+ul, ol {
+  font-size: 1.4em;
+  padding: 0.8em 0px;
+}
+
+/* line 80, ../sass/screen.scss */
+ul {
+  list-style: square;
+}
+/* line 82, ../sass/screen.scss */
+ul li {
+  margin-left: 20px;
+  margin-bottom: 0.8em;
+}
+
+/* line 88, ../sass/screen.scss */
+ol {
+  list-style: decimal;
+}
+/* line 90, ../sass/screen.scss */
+ol li {
+  margin-left: 20px;
+  margin-bottom: 0.8em;
+}
+
+/* line 96, ../sass/screen.scss */
+ul.horizontal, ol.horizontal {
+  list-style: none;
+}
+/* line 98, ../sass/screen.scss */
+ul.horizontal li, ol.horizontal li {
+  float: left;
+  margin-right: 1em;
+  margin-left: 0px;
+}
+
+/* line 106, ../sass/screen.scss */
+p {
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+
+/* line 119, ../sass/screen.scss */
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* line 126, ../sass/screen.scss */
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 100px;
+  width: 100%;
+}
+
+/* line 135, ../sass/screen.scss */
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+}
+
+/* line 1, ../sass/components/_btn.scss */
+.btn, .btn-sec {
+  background-color: #e00000;
+  border: 1px solid #ae1000;
+  border-radius: 2px;
+  padding: 0.6em;
+  display: inline-block;
+  width: auto;
+  font-family: 'mylius_modernbold';
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+/* line 15, ../sass/components/_btn.scss */
+.btn:hover, .btn-sec:hover {
+  background-color: #ae1000;
+  border: 1px solid #e00000;
+}
+
+/* line 20, ../sass/components/_btn.scss */
+.btn-sec {
+  background-color: #005daa;
+  border: 1px solid #002649;
+}
+
+/* line 26, ../sass/components/_btn.scss */
+.btn-sec:hover {
+  background-color: #002649;
+  border: 1px solid #005daa;
+}
+
+/* line 1, ../sass/components/_popup.scss */
+.popup {
+  position: absolute;
+  z-index: 100;
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 10, ../sass/components/_popup.scss */
+.popup .outer {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  background-color: #ff000;
+}
+/* line 17, ../sass/components/_popup.scss */
+.popup .outer .inner {
+  vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  width: 500px;
+  background-color: #eee;
+  padding: 30px;
+}
+
+/* line 1, ../sass/components/_aeroplane.scss */
+#aeroplane {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/placeholder.jpg");
+  background-size: cover;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  -moz-transition: -moz-transform 2s ease-in-out;
+  -o-transition: -o-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+}
+
+/* line 14, ../sass/components/_aeroplane.scss */
+#aeroplane.zoom {
+  -webkit-transform: scale3d(4.5, 4.5, 1);
+  -moz-transform: scale3d(4.5, 4.5, 1);
+  -ms-transform: scale3d(4.5, 4.5, 1);
+  -o-transform: scale3d(4.5, 4.5, 1);
+  transform: scale3d(4.5, 4.5, 1);
+}
+
+/* line 18, ../sass/components/_aeroplane.scss */
+#aeroplane.day1 {
+  -webkit-transform-origin: 10% 44%;
+  -moz-transform-origin: 10% 44%;
+  -ms-transform-origin: 10% 44%;
+  -o-transform-origin: 10% 44%;
+  transform-origin: 10% 44%;
+}
+
+/* line 23, ../sass/components/_aeroplane.scss */
+#aeroplane.day2 {
+  -webkit-transform-origin: 20% 44%;
+  -moz-transform-origin: 20% 44%;
+  -ms-transform-origin: 20% 44%;
+  -o-transform-origin: 20% 44%;
+  transform-origin: 20% 44%;
+}
+
+/* line 28, ../sass/components/_aeroplane.scss */
+#aeroplane.day3 {
+  -webkit-transform-origin: 30% 44%;
+  -moz-transform-origin: 30% 44%;
+  -ms-transform-origin: 30% 44%;
+  -o-transform-origin: 30% 44%;
+  transform-origin: 30% 44%;
+}
+
+/* line 33, ../sass/components/_aeroplane.scss */
+#aeroplane.day4 {
+  -webkit-transform-origin: 40% 44%;
+  -moz-transform-origin: 40% 44%;
+  -ms-transform-origin: 40% 44%;
+  -o-transform-origin: 40% 44%;
+  transform-origin: 40% 44%;
+}
+
+/* line 38, ../sass/components/_aeroplane.scss */
+#aeroplane.day5 {
+  -webkit-transform-origin: 50% 44%;
+  -moz-transform-origin: 50% 44%;
+  -ms-transform-origin: 50% 44%;
+  -o-transform-origin: 50% 44%;
+  transform-origin: 50% 44%;
+}
+
+/* line 43, ../sass/components/_aeroplane.scss */
+#aeroplane.day6 {
+  -webkit-transform-origin: 60% 90%;
+  -moz-transform-origin: 60% 90%;
+  -ms-transform-origin: 60% 90%;
+  -o-transform-origin: 60% 90%;
+  transform-origin: 60% 90%;
+  -webkit-transform: scale3d(1.8, 1.8, 1);
+  -moz-transform: scale3d(1.8, 1.8, 1);
+  -ms-transform: scale3d(1.8, 1.8, 1);
+  -o-transform: scale3d(1.8, 1.8, 1);
+  transform: scale3d(1.8, 1.8, 1);
+}

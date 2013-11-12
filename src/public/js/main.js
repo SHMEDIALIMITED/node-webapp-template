@@ -1,26 +1,49 @@
 require.config({
-	'paths': {
-		'jquery': 'libs/jquery-1.8.3.min',
-		'backbone': 'libs/backbone-min',
-		'underscore': 'libs/underscore-min'
-	},
+
+	name : 'main',
+
+        paths: {
+          	'jquery': 'libs/jquery.min',
+            'backbone': 'libs/backbone.1.1.0.min',
+            'underscore': 'libs/underscore.1.5.2.min',
+            'form' : 'libs/backbone-forms.min'
+        },
  
-	shim: {
-		'backbone': {
-			deps: ['underscore', 'jquery'],
-			exports: 'Backbone'
-		},
-		'underscore': {
-			exports: '_'
-		}
-	}
+        shim: {
+            'jquery': {
+                exports: '$'
+            },
+            'underscore': {
+                exports: '_'
+            },
+            'backbone': {
+                    deps: ['jquery', 'underscore'],
+                    exports: 'Backbone'
+            }
+
+
+
+        }
 });
  
-require([
-	'app', 
-	'jquery',
-], function(App, $) {
-	$(document).ready(function() {
-		App.init();
-	});
+require(
+    [
+        'backbone',
+        'form',
+   	    'view/ApplicationView'
+    ],
+
+    function(
+
+        Backbone,
+        Form,
+        ApplicationView
+
+        ) {
+
+    var app;
+
+    $(document).ready(function() {
+        app = new ApplicationView();
+    });
 });

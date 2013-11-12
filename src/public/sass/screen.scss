@@ -1,0 +1,159 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transition";
+
+
+
+
+
+// BA Fonts
+// ---------------------------------------------------------------
+@font-face {
+    font-family: 'mylius_modernbold';
+    src: url('fonts/myliusmodern-bold-webfont.eot');
+    src: url('fonts/myliusmodern-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/myliusmodern-bold-webfont.woff') format('woff'),
+    url('fonts/myliusmodern-bold-webfont.ttf') format('truetype'),
+    url('fonts/myliusmodern-bold-webfont.svg#mylius_modernbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mylius_modernregular';
+    src: url('fonts/myliusmodern-regular-webfont.eot');
+    src: url('fonts/myliusmodern-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/myliusmodern-regular-webfont.woff') format('woff'),
+    url('fonts/myliusmodern-regular-webfont.ttf') format('truetype'),
+    url('fonts/myliusmodern-regular-webfont.svg#mylius_modernregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+// Globals
+// ---------------------------------------------------------------
+
+
+$red-primary    :       #e00000;//#d81e05;
+$red-secondary  :       #ae1000;
+$blue-primary   :       #005DAA;
+$blue-secondary :       #002649;
+$white-primary  :       #fff;
+
+
+* {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: 'mylius_modernregular';
+    font-size: 62.5%;
+    color: $blue-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'mylius_modernbold';
+    padding: 0.8em 0px;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+    border-bottom: dashed 1px #777;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.6em; }
+h3 { font-size: 2.2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+
+
+
+ul, ol {
+    font-size: 1.4em;
+    padding: 0.8em 0px;
+}
+
+ul {
+    list-style: square;
+    li {
+        margin-left: 20px;
+        margin-bottom: 0.8em;
+    }
+}
+
+ol {
+    list-style: decimal;
+    li {
+        margin-left: 20px;
+        margin-bottom: 0.8em;
+    }
+}
+
+ul.horizontal, ol.horizontal  {
+    list-style: none;
+    li {
+        float: left;
+        margin-right: 1em;
+        margin-left: 0px;
+    }
+}
+
+
+p {
+    font-size: 1.6em;
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+
+// Skeleton Layout
+// ---------------------------------------------------------------
+body,html {
+    width: 100%;
+    height: 100%;
+    background-color: $white-primary;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    height: 100px;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+}
+
+
+
+
+
+
+// Custom Components
+// ---------------------------------------------------------------
+@import "components/btn";
+@import "components/popup";
+@import "components/aeroplane";
+
+
+
+
+
+
+
