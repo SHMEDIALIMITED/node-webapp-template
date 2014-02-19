@@ -158,129 +158,13 @@ module.exports = function (grunt) {
 
         var env = grunt.option('env') || 'qa';
         var id = grunt.option('id');
-        if(env == 'stage') id = 'all'
-        if(id && id != 'all') {
-            var pages = require('../src/server_node/models');
-            for(var i = 0; i < pages.length; ++i) {
-                var p = pages[i];
-                if(p.id == id) break;
-                else p = null;
-            }
-            if(!p) {
-                grunt.log.error('Page ' + id + ' not found');
-                done();
-            }
 
+        exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/*.html ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
+            if (err) return err,
+            done();
+        }).stdout.pipe(process.stdout);;
 
-
-            async.parallel([
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/*.html ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/.htaccess ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/css ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/img/*.* ec2-user@54.194.162.232:/var/www/html/' + env + '/img/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/img/' + p.id + ' ec2-user@54.194.162.232:/var/www/html/' + env + '/img/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/js ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/video ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                }
-            ],
-                function(error, results) {
-                    done();
-                });
-
-        } else if(id == 'all') {
-
-            async.parallel([
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/** ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/.htaccess ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                }
-            ],
-                function(error, results) {
-                    done();
-                });
-
-        } else {
-
-            async.parallel([
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/*.html ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/css ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/js ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/video ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                },
-                function(callback) {
-                    exec('scp -i tools/AWS/MPC-DEV.pem -r dist/public/.htaccess ec2-user@54.194.162.232:/var/www/html/' + env + '/', function(err) {
-                        if (err) return callback(err);
-                        callback(null, 'html');
-                    }).stdout.pipe(process.stdout);;
-                }
-            ],
-                function(error, results) {
-                    done();
-                });
-
-
-        }
+    
 
     });
 
@@ -310,8 +194,6 @@ module.exports = function (grunt) {
         'clean:views',
         'requirejs:main',
         'copy:js',
-        'render',
-        'httpd',
         'deploy']);
 
 };
