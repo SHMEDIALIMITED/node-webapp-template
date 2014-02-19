@@ -9,10 +9,12 @@ module.exports = {
 
         // Express app name
         app: {
-            name: 'BA Advent Calendar Dev'
+            name: 'UGG Game Dev'
         },
 
-        db: 'mongodb://localhost/ba-advent-calendar-dev'
+        db: 'mongodb://localhost/ugg',
+
+        port : 8000
     },
 
     production: {
@@ -23,9 +25,11 @@ module.exports = {
 
         // Express app name
         app: {
-            name: 'BA Advent Calendar Dev'
+            name: 'UGG Game'
         },
 
-        db: process.env.MONGOLAB_URI
+        db: process.env.MONGOLAB_URI,
+
+        port  : process.env.PORT
     }
 }

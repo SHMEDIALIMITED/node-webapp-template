@@ -1,1 +1,0 @@
-require.config({paths:{jquery:"//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min",backbone:"libs/backbone.1.1.0.min",underscore:"libs/underscore.1..5.2.min"},shim:{backbone:{deps:["underscore","jquery"],exports:"Backbone"},underscore:{exports:"_"},jquery:{exports:"$"}}}),require([],function(){$(document).ready(function(){App.init()})}),define("main",function(){});

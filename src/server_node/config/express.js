@@ -24,7 +24,7 @@ module.exports = function (app, config) {
     app.use(express.logger('dev'))
 
 
-    app.set('port', process.env.PORT || 8080);
+    app.set('port', config.port);
 
     app.engine('.html', require('ejs').__express);
 
